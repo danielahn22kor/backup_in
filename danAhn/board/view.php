@@ -3,9 +3,11 @@ include_once('header.php');
 require_once('preset.php');
 ?>
 <?php
+$cont_path = $_GET["cont_path"];
 $text_idx = $_GET["text_idx"];
 $title = $_GET["title"];
-$q = "SELECT * FROM danAhnDB.아이폰5s_Contents WHERE text_idx = ".$text_idx."";
+$end_Day = $_GET["endDay"];
+$q = "SELECT * FROM danAhnDB.".$cont_path." WHERE text_idx = ".$text_idx." && reg_date <= ".$end_Day."";
 $q_result=mysql_query($q,$connectSql);
 $data=mysql_fetch_array($q_result);
 ?>

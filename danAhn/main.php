@@ -72,6 +72,9 @@ echo "\nFINISH\n".$finishDate;
 $q = "SELECT * FROM danAhnDB.".$txt_infoTableName."";
 $qry_result = mysql_query($q, $connectSql);
 $q_total = mysql_num_rows($qry_result);
+$q_total= preg_replace('([^0-9]*)', '', $q_total);
 mysql_close();
 ?>
-<td><a href="./board/contents.php?total=<?php echo $q_total; ?>&cont_path=<?php echo $contents_TableName; ?>&txt_path=<?php echo $txt_infoTableName; ?>&page=1">View Result </a></td>
+<p>
+<td><a href="./board/contents.php?total=<?php echo $q_total; ?>&cont_path=<?php echo $contents_TableName; ?>&txt_path=<?php echo $txt_infoTableName; ?>&page=1&endDay=<?php echo $_GET["endDay"]?>">View Result </a></td>
+</p>

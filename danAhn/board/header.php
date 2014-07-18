@@ -3,7 +3,7 @@
 	<HEAD>
 		<TITLE>검색 결과</TITLE>
 		<meta charset="utf=-8">
-		<link href="/usr/local/apache/htdocs/danAhn/phpstud/board_test/css/css/bootstrap.css" rel="stylesheet">
+		<link href="./css/css/bootstrap.css" rel="stylesheet">
 	</HEAD>
 	<BODY>
 		<div class="header">
