@@ -26,7 +26,7 @@ echo "\nStart\n".$startDate;
 echo "\n";
 
 
-$connectSql = mysql_connect("localhost","root","metrix") or die("openshit");
+$connectSql = mysql_connect("","","") or die("openshit");
 mysql_select_db('danAhnDB',$connectSql);
 $compareStr = "";
 
